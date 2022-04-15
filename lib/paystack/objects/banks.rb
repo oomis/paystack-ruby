@@ -1,12 +1,12 @@
 require 'paystack/objects/base.rb'
 
 class PaystackBanks < PaystackBaseObject
-	def list(page=1)
-		return PaystackBanks.list(@paystack, page)
+	def list(country)
+		return PaystackBanks.list(@paystack, country)
 	end
 
 
-	def PaystackBanks.list(paystackObj, page=1)
+	def PaystackBanks.list(paystackObj, country)
 		initGetRequest(paystackObj, "#{API::BANK_PATH}?country=#{country}")
 	end
 end
