@@ -7,6 +7,6 @@ class PaystackBanks < PaystackBaseObject
 
 
 	def PaystackBanks.list(paystackObj, page=1)
-		initGetRequest(paystackObj, "#{API::BANK_PATH}?page=#{page}")
+		initGetRequest(paystackObj, "#{API::BANK_PATH}?country=south+africa")
 	end
 end
